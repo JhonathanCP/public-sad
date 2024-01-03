@@ -1,0 +1,125 @@
+@media (max-width: 1600px) {
+
+    /*********************************************************/
+    /*******  PLATAFORMA DE DATOS POWER BI ESSALUD  **********/
+    /******************* Area: SGIT; *************************/
+    /****** Autor del codigo css = Edgardo M Paresdes M ******/
+    /*********************************************************/
+    html,
+    body {
+        font-size: 58%;
+    }
+
+    .login form>img {
+        width: 160px;
+    }
+
+    .login form {
+        max-width: 290px;
+        padding: 20px;
+    }
+
+    .estilo1,
+    .estilo2,
+    .estilo3 {
+        padding: 9px 23px;
+    }
+
+    header {
+        height: 63px;
+        border-bottom: 5px solid #ffffff;
+        padding: 5px
+    }
+
+    header .logo-principal {
+        height: 32px;
+    }
+
+    footer {
+        min-height: 29px;
+    }
+
+    .contenedor-principal {
+        min-height: calc(100vh - 93px);
+    }
+
+    nav {
+        width: 190px;
+    }
+
+    .presentacion {
+        width: calc(100vw - 194px);
+    }
+
+    .contenedor-body {
+        padding-left: 190px;
+    }
+
+    nav li span:before {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
+@media (max-width: 920PX) {
+    /*********************************************************/
+    /*******  PLATAFORMA DE DATOS POWER BI ESSALUD  **********/
+    /******************* Area: SGIT; *************************/
+    /****** Autor del codigo css = Edgardo M Paresdes M ******/
+    /*********************************************************/
+
+    nav ul {
+        margin: 0px 0;
+    }
+
+
+    nav {
+        position: relative;
+        width: 100%;
+        left: 0;
+        height: auto;
+        padding: 0;
+    }
+
+    .contenedor-body {
+        padding: 0;
+    }
+
+
+    .presentacion {
+        width: 100%;
+        height: 56vh;
+    }
+
+    .contenedor-principal {
+        padding: 10px;
+        min-height: auto;
+    }
+
+    .w-100,
+    .w-33,
+    .w-50,
+    .w-75,
+    .w-20,
+    .w-80,
+    .w-60,
+    .w-40 {
+        width: 100%;
+    }
+
+    .login .descripcion {
+        display: none;
+    }
+}
+
+
+@media (max-width: 620PX) {
+    /*********************************************************/
+    /*******  PLATAFORMA DE DATOS POWER BI ESSALUD  **********/
+    /******************* Area: SGIT; *************************/
+    /****** Autor del codigo css = Edgardo M Paresdes M ******/
+    /*********************************************************/
+
+
+}
