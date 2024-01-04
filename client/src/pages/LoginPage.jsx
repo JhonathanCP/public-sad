@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { login } from "../api/auth.api";
 import { toast } from "react-hot-toast";
 import '../assets/css/estilos.css';
-import '../assets/css/estilos-responsive.css';  // Asegúrate de importar tus estilos CSS
+import '../assets/css/estilos-responsive.css';
 import logo from '../assets/img/logo-essalud.svg';
 import { jwtDecode } from "jwt-decode";
 import ReCaptcha from 'react-google-recaptcha';

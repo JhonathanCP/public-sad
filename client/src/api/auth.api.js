@@ -11,7 +11,7 @@ baseURL: `${URL}/auth/`,
 
 // Interceptor para incluir el token en los encabezados de todas las solicitudes
 authApi.interceptors.request.use((config) => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("access");
     if (token) {
         config.headers['x-access-token'] = token;  // Corregir aquí
     }

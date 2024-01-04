@@ -109,11 +109,6 @@ export const getInfo = async (req, res) => {
         
         // Construir la respuesta
         const response = {
-            user: {
-                id: user.id,
-                username: user.username,
-                correo: user.correo
-            },
             groups: groups,
             reports: reports
         };

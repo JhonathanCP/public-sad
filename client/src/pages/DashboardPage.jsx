@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from "react-hot-toast";
 import '../assets/css/estilos.css';
 import '../assets/css/estilos-responsive.css';
+import { toggleSidebar } from '../assets/js/funciones.js';
 
 export function DashboardPage() {
     const [grupos, setGrupos] = useState([]);
@@ -60,7 +61,7 @@ export function DashboardPage() {
     };
 
     return (
-        <div>
+        <section>
         <head>
             <meta charSet="utf-8" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,6 +77,9 @@ export function DashboardPage() {
                 <div className="btn_opciones">
                 <ul>
                     <li onClick={handleLogout}>Cerrar Sesión</li>
+                    <button id="toggleSidebar" onClick={toggleSidebar}>
+                        Toggle Sidebar
+                    </button>
                 </ul>
                 </div>
             </div>
@@ -117,6 +121,6 @@ export function DashboardPage() {
             </p>
             </footer>
         </body>
-        </div>
+        </section>
     );
 }

@@ -461,6 +461,7 @@ a:hover {
     min-height: calc(100vh - 120px);
     position: relative;
     overflow: hidden;
+    
 }
 
 .contenedor-principal .contenido {
@@ -1963,4 +1964,12 @@ a.curso:hover {
 
 .ubicacion span {
     color: #1b76bc;
+}
+nav {
+    /* Estilos anteriores del nav... */
+    transition: margin-left 0.5s; /* Añade una transición al margin-left */
+}
+
+.nav-hidden {
+    margin-left: -250px; /* Oculta el nav moviéndolo a la izquierda */
 }
