@@ -7,6 +7,7 @@ import reportsRouter from "./routes/reports.routes.js"
 import authRouter from "./routes/auth.routes.js"
 import usersRoutes from "./routes/user.routes.js";
 import {createRoles, createAdmin} from "./libs/initialSetup.js"
+import path from "path"
 
 const app = express();
 createRoles();
@@ -26,5 +27,12 @@ app.use('/groups',groupsRouter)
 app.use('/reports',reportsRouter)
 app.use('/auth', authRouter)
 app.use('/user', usersRoutes)
+
+// Archivos estáticos
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+app.use(express.static(path.join(__dirname, 'sad')));
+app.get('/menu', (req, res) => {
+  res.sendFile(path.join(__dirname, 'sad', 'menu.html'));
+});
 
 export default app;

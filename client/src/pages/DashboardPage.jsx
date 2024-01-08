@@ -8,7 +8,7 @@ import '../assets/css/estilos.css';
 import '../assets/css/estilos-responsive.css';
 import { toggleSidebar } from '../assets/js/funciones.js';
 
-export function DashboardPage() {
+export function DashboardPages() {
     const [grupos, setGrupos] = useState([]);
     const [reportes, setReportes] = useState([]);
     const [reporteSeleccionado, setReporteSeleccionado] = useState(null);

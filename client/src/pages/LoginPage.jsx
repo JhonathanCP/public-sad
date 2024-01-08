@@ -8,7 +8,7 @@ import logo from '../assets/img/logo-essalud.svg';
 import { jwtDecode } from "jwt-decode";
 import ReCaptcha from 'react-google-recaptcha';
 
-const LoginPage = () => {
+export function LoginPage () {
     const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -109,5 +109,3 @@ const LoginPage = () => {
         </section>
     );
 };
-
-export default LoginPage;
