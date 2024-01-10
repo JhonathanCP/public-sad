@@ -30,7 +30,7 @@ export const signupHandler = async (req, res) => {
 
         // Create a token
         const token = jwt.sign({ id: newUser.id, username: newUser.username }, SECRET, {
-            expiresIn: 86400, // 24 hours
+            expiresIn: "7200s", // 24 hours
         });
 
         return res.status(200).json({ token });
@@ -59,7 +59,7 @@ export const signinHandler = async (req, res) => {
             });
 
         const token = jwt.sign({ id: userFound.id, username: userFound.username }, SECRET, {
-            expiresIn: 86400, // 24 hours
+            expiresIn: "7200s", // 24 hours
         });
 
         res.json({ token });

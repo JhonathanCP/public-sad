@@ -2,16 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { login } from "../api/auth.api";
 import { toast } from "react-hot-toast";
-// import '../assets/css/estilos.css';
-// import '../assets/css/estilos-responsive.css';
-// import logo from '../assets/img/logo-essalud.svg';
 import { jwtDecode } from "jwt-decode";
 import ReCaptcha from 'react-google-recaptcha';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Card, Col, Form, FormGroup, FormControl, FormLabel, Button, Container, Image } from 'react-bootstrap';
 import FondoSvg from '../assets/fondo.svg'
 import Logo from '../assets/logo-essalud.svg'
-import e from 'cors';
 
 export function LoginPage() {
     const [credentials, setCredentials] = useState({
@@ -66,13 +62,14 @@ export function LoginPage() {
 
     return (
         <Container style={{ background: `url(${FondoSvg}) center fixed`, backgroundSize: 'cover', minHeight: '100vh' }} fluid className="d-flex align-items-center justify-content-center">
-            <Col lg={7} md={6} className='p-5'>
+            <Row>
+            <Col lg={7} md={6} xs={12} className="d-flex justify-content-center align-items-center p-5">
                 <div className='text-white'>
-                    <h1>Plataforma de análisis de datos</h1>
-                    <p className='d-none d-sm-block'>Sistema institucional de ESSALUD que pone a disposición los tableros de mando y control desarrollados con business intelligence y business analytics para la toma de decisiones en el marco del gobierno de datos.</p>
+                    <h1>Sistema de analítica de datos</h1>
+                    <p className='d-none d-sm-block'>Sistema institucional de EsSalud que pone a disposición los tableros de mando y control desarrollados con business intelligence y business analytics para la toma de decisiones en el marco del gobierno de datos.</p>
                 </div>
             </Col>
-            <Col lg={5} md={6} className="d-flex justify-content-center align-items-center">
+            <Col lg={5} md={6} xs={12} className="d-flex justify-content-center align-items-center">
                 <Card className='p-4'>
                     <Form onSubmit={handleLogin}>
                         <div className="text-center mb-4">
@@ -110,6 +107,7 @@ export function LoginPage() {
                     </Form>
                 </Card>
             </Col>
+            </Row>
         </Container>
     );
 };
