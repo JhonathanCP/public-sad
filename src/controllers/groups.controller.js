@@ -39,10 +39,11 @@ export const createGroups = async (req, res) => {
 export const updateGroups = async (req, res) => {
     try {
         const {id} = req.params
-        const {nombre, descripcion} = req.body
+        const {nombre, descripcion, icono} = req.body
         const group = await Group.findByPk(id)
         group.nombre = nombre
         group.descripcion = descripcion
+        group.descripcion = icono
         await group.save()
         res.json(group)
     } catch (error) {

@@ -19,6 +19,9 @@ export const Group = sequelize.define('group', {
     activo: {
         type: DataTypes.BOOLEAN,
         defaultValue: true
+    },
+    icono: {
+        type: DataTypes.STRING
     }
 });
 

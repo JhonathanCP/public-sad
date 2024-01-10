@@ -147,6 +147,38 @@ export const addGroupToUser = async (req, res) => {
     }
 };
 
+export const addAllPermissions = async (req, res) => {
+    try {
+        const { userId } = req.params;
+
+        const user = await User.findByPk(userId);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // Obtener todos los reportes y grupos existentes
+        const allReports = await Report.findAll();
+        const allGroups = await Group.findAll();
+
+        // Agregar todos los reportes al usuario
+        await user.addReports(allReports);
+
+        // Agregar todos los grupos al usuario
+        await user.addGroups(allGroups);
+
+        return res.status(200).json({
+            id: user.id,
+            username: user.username,
+            correo: user.correo,
+            reports: await user.getReports(), // Retorna los reportes actualizados del usuario
+            groups: await user.getGroups() // Retorna los grupos actualizados del usuario
+        });
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: "Error adding all permissions to user" });
+    }
+};
+
 export const removeRoleFromUser = async (req, res) => {
     try {
         const { userId, roleId } = req.params;

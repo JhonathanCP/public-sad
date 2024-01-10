@@ -30,9 +30,9 @@ app.use('/user', usersRoutes)
 
 // Archivos estáticos
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
-app.use(express.static(path.join(__dirname, 'sad')));
-app.get('/menu', (req, res) => {
-  res.sendFile(path.join(__dirname, 'sad', 'menu.html'));
+app.use(express.static(path.join(__dirname, 'dist')));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 export default app;
