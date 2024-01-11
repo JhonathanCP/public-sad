@@ -6,6 +6,7 @@ import { toast } from "react-hot-toast";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Logo from '../assets/logo-essalud-blanco.svg';
+import LogoA from '../assets/logo-essalud.svg';
 import Img from '../assets/hero-img.svg';
 import { Container, Navbar, Nav, NavDropdown, Row, Col, Card } from 'react-bootstrap';
 import 'aos/dist/aos.css';
@@ -83,13 +84,13 @@ export function MenuPage() {
     return (
         <Container fluid className='p-0'>
             <Container fluid className='p-0'>
-                <Navbar fixed="true" style={{ backgroundColor: "#0064AF", boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)' }} data-bs-theme="dark">
-                    <Container fluid className='mx-5 px-5 py-1'>
+                <Navbar fixed="true" style={{ backgroundColor: "#0064AF", boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.2)' }} data-bs-theme="dark" className='p-0'>
+                    <Container fluid className='mx-5 px-5 py-0'>
                         <Col className='col-auto me-auto'>
                             <Navbar.Brand href="#home">
                                 <img
                                     src={Logo}
-
+                                    style={{width: "140.5px", height: "29.98px"}}
                                     className="d-inline-block align-top img-fluid"
                                     alt="React Bootstrap logo"
                                 />
@@ -107,7 +108,8 @@ export function MenuPage() {
                     </Container>
                 </Navbar>
             </Container>
-            <Container fluid fixed="true" style={{ backgroundColor: "#0064AF" }}>
+            <Container fluid fixed="true" style={{ backgroundColor: '#0064AF' }}>
+
                 <Row className='px-5 py-5 d-flex align-items-center justify-content-center'>
                     <Col xs={12} md={12} xl={7} className='p-5 text-white ' data-aos="fade-in" data-aos-delay="250">
                         <h2 className='d-xl-none text-center'>Sistema de Analítica <span>de Datos</span></h2>
@@ -116,19 +118,19 @@ export function MenuPage() {
                         <p className='d-none d-xl-block'>Sistema institucional de ESSALUD que pone a disposición los tableros de mando y control desarrollados con business intelligence y business analytics para la toma de decisiones en el marco del gobierno de datos.</p>
 
                     </Col>
-                    <Col xs={12} md={12} xl={5} className='px-5 py-2 d-flex align-items-center justify-content-center'>
+                    <Col xs={12} md={12} xl={5} className='px-5 py-0 d-flex align-items-center justify-content-center'>
                         <img src={Img} className="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="250" />
                     </Col>
                 </Row>
             </Container>
 
             <Container fluid fixed="true" style={{ backgroundColor: "#f0f0f0" }}>
-                <Row className='d-flex align-items-center justify-content-center py-5' style={{ minHeight: '15vh' }}>
+                {/* <Row className='d-flex align-items-center justify-content-center py-2' style={{ minHeight: '15vh' }}>
                     <Col xs={12} data-aos="fade-up" data-aos-delay="250">
                         <h2 style={{ position: "relative", textAlign: "center" }}>Nuestros Dashboards<span style={{ content: "", position: "absolute", display: "block", width: "100px", height: "3px", background: "#0064AF", left: 0, right: 0, bottom: "-15px", margin: "auto" }} ></span></h2>
                     </Col>
-                </Row>
-                <Row className='d-flex align-items-center justify-content-center py-4 px-5 mx-2' data-aos="fade-up" data-aos-delay="250">
+                </Row> */}
+                <Row className='d-flex align-items-center justify-content-center py-5 px-5 mx-2' data-aos="fade-up" data-aos-delay="250">
                     {grupos.map((grupo) => (
                         <Col key={grupo.id} xs={12} sm={4} lg={3} style={{ minHeight: '25vh' }}>
                             <Card border="light" className="p-2 mx-3" onMouseEnter={() => handleMouseEnter(grupo.id)} onMouseLeave={() => handleMouseLeave(grupo.id)} style={{ position: 'relative', marginBottom: '50px', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -152,14 +154,14 @@ export function MenuPage() {
                     ))}
                 </Row>
             </Container>
-            <Container fluid style={{ backgroundColor: "#0064AF" }}>
-                <Row className='d-flex align-items-center justify-content-center py-3' >
+            <Container fluid style={{ backgroundColor: "#f0f0f0" }}>
+                <Row className='d-flex align-items-center justify-content-center py-0' >
                     <div className="text-center">
-                        <img src={Logo} alt="Logo" />
-                        <div className="pt-2 text-white">
-                            &copy; Copyright <strong><span>GCTIC - ESSALUD</span></strong>. Todos los derechos reservados
+                        {/* <img src={LogoA} alt="Logo" style={{width: "140.5px", height: "29.98px"}} /> */}
+                        <div className="py-1 text-dark">
+                            &copy;2024 Copyright <strong><span>GCTIC - ESSALUD</span></strong>. Todos los derechos reservados
                         </div>
-                        <div className="pt-2 text-white">Desarrollado por GCTIC</div>
+                        {/* <div className="pt-1 text-dark">Desarrollado por la GCTIC</div> */}
                     </div>
                 </Row>
             </Container>

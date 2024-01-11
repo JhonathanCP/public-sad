@@ -133,13 +133,13 @@ export function DashboardPage() {
             </Container>
 
             {/* Container inferior */}
-            <Container fluid style={{ backgroundColor: "#0064AF" }}>
+            <Container fluid style={{ backgroundColor: "#f0f0f0" }}>
                 <Row className='d-flex align-items-center justify-content-center py-1' >
                     <div className="text-center">
-                        <div className="pt-0 text-white">
+                        <div className="pt-0 text-primary">
                             &copy; Copyright <strong><span>GCTIC - ESSALUD</span></strong>. Todos los derechos reservados
                         </div>
-                        <div className="pt-0 text-white">Desarrollado por GCTIC</div>
+                        {/* <div className="pt-0 text-primary">Desarrollado por GCTIC</div> */}
                     </div>
                 </Row>
             </Container>
