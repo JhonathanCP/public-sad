@@ -1,9 +1,9 @@
 import { Sequelize } from "sequelize";
 
-export const sequelize = new Sequelize('sad_db', 'postgres', 'zxcvqwer159A-', {
-    host: '10.0.1.229',
+export const sequelize = new Sequelize('jwuyevnt', 'jwuyevnt', '5G84W5LSCaxZqEZxaEOzIqiA7D48ke0X', {
+    host: 'tuffi.db.elephantsql.com',
     dialect: 'postgres',
-    // dialectOptions: {
-    //     ssl: true
-    //   }
+    dialectOptions: {
+        ssl: true
+      }
 })
